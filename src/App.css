@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  width:100vw
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
 }
 
@@ -15,7 +16,17 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-footer {
+  background-color: #000000;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,9 +34,19 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-tag {
+  background-color: #000000;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
 .App-link {
-  color: #61dafb;
+  color: #000000;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +56,92 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-carousel {
+  background-color: white;
+  height: 5vh;
+  width: 200%;
+  border:1px solid #ffffff;
+  overflow: hidden;
+  position: relative;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+  /* w-[200%] h-20 border-t border-b border-gray-600 overflow-hidden relative" */
+}
+.App-carousel-inner {
+  /* "w-[200%] flex items-center h-20 justify-around absolute left-0 animate gap-20 animate" */
+  height: 5vh;
+  width: 200%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: absolute;
+  left:0;
+  animation: scroll 60s linear infinite;
+  background-color:grey;
+}
+
+@keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.App-carousel-item {
+  /* "flex justify-center items-start w-[20rem]" */
+  /* display: flex; */
+  width: fit-content;
+  justify-content: center;
+  margin: 0 20px;
+  align-items: flex-start;
+  /* width: 200px; */
+  color: #ffffff;
+}
+
+.animate {
+  animation: scroll 15s linear infinite;
+}
+.Card-container {
+  background-color: white;
+  width: 100vw;
+  margin: 5% 0%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding:2% 2%;
+}
+.Card-box {
+  min-width: 400px;
+  max-width: 800px;
+  border: 1px solid white;
+  border-radius: 15px;
+  text-align: center;
+  padding: 2% ;
+  background-color: #282c34;
+  margin: 2% 2%;
+}
+
+.Card-title {
+  width: 100%;
+  font-weight: 500;
+}
+.Card-desc {
+  width: 100%;
+
+}
+.Card-btn {
+  max-width: fit-content;
+  background-color: rgb(49, 156, 206);
+  border: 1px solid grey;
+  height: 20px;
 }
