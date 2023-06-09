@@ -9,7 +9,6 @@ export const Carousel = ({stacks}) =>{
               return (
                 <div key={stack} className="App-carousel-item">
                   {stack}
-                  {console.log(stack)}
                 </div>
               );
             })}
@@ -17,7 +16,6 @@ export const Carousel = ({stacks}) =>{
               return (
                 <div className="App-carousel-item">
                   {stack}
-                  {console.log()}
                 </div>
               );
             })}

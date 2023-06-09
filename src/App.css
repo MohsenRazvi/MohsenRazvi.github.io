@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  width:100vw
+  /* width:100vw; */
+  position: relative;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -17,20 +19,22 @@
 .App-header {
   background-color: #282c34;
   min-height: 80vh;
+  width:100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   font-size: calc(10px + 2vmin);
   color: white;
+  /* text-align: left; */
 }
 .App-footer {
   background-color: #000000;
   min-height: 20vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -40,9 +44,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: white;
+  padding: 0 20px;
 }
 
 .App-link {
@@ -62,7 +68,8 @@
   background-color: white;
   height: 5vh;
   width: 200%;
-  border:1px solid #ffffff;
+  border-top:1px solid #ffffff;
+  border-bottom:1px solid #ffffff;
   overflow: hidden;
   position: relative;
   /* display: flex; */
@@ -103,26 +110,31 @@
   justify-content: center;
   margin: 0 20px;
   align-items: flex-start;
+  font-family: 'Courier New', Courier, monospace;
   /* width: 200px; */
   color: #ffffff;
 }
 
-.animate {
-  animation: scroll 15s linear infinite;
-}
+
 .Card-container {
-  background-color: white;
-  width: 100vw;
-  margin: 5% 0%;
+  background-color: rgb(214, 214, 214);
+  width: 100%;
+  margin: 2% 0%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding:2% 2%;
+  padding:1% 1%;
 }
 .Card-box {
   min-width: 400px;
-  max-width: 800px;
+  max-width: 400px;
+  flex-basis: auto; 
+  flex-grow: 1;
+  /* width: 40%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 1px solid white;
   border-radius: 15px;
   text-align: center;
@@ -134,14 +146,33 @@
 .Card-title {
   width: 100%;
   font-weight: 500;
+  text-align: center;
+  margin-bottom: 5%;
 }
 .Card-desc {
   width: 100%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: calc(2px + 2vmin);
+  text-align: left;
+  margin-bottom: 5%;
 
 }
 .Card-btn {
+  /* right: 0%; */
   max-width: fit-content;
   background-color: rgb(49, 156, 206);
   border: 1px solid grey;
   height: 20px;
+}
+
+.Section-title {
+  background-image: linear-gradient(45deg, #78f397, #e4da56);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: calc(50px + 2vmin);
+  font-weight: 700;
+  margin-top: 2%;
+  margin-right: 70%;
+
 }
